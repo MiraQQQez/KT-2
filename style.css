@@ -1,0 +1,128 @@
+body {
+  margin: 0; /* Убираем отступы у body */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Шрифт страницы */
+  background-color: #001f3f; /* Цвет фона страницы */
+}
+
+.content {
+  display: flex; /* Flex-контейнер для размещения элементов */
+  flex-direction: column; /* Вертикальное размещение элементов */
+  padding: 20px; /* Внутренние отступы */
+}
+
+.header {
+  display: flex; /* Flex-контейнер для заголовка */
+  justify-content: space-between; /* Распределение пространства между элементами */
+  align-items: center; /* Выравнивание по центру по вертикали */
+  width: 100%; /* Ширина заголовка на 100% */
+  margin-bottom: 20px; /* Отступ снизу */
+}
+
+.user {
+  padding-right: 300px; /* Отступ справа для блока пользователя */
+  margin-bottom: 0px; /* Отступ снизу */
+  color: white; /* Цвет текста */
+  font-size: 30px; /* Размер шрифта */
+}
+
+h1 {
+  margin-left: 50px; /* Отступ слева для заголовка */
+  color: white; /* Цвет текста заголовка */
+  font-size: 35px; /* Размер шрифта заголовка */
+}
+
+.wrapper {
+  display: flex; /* Flex-контейнер для плиток */
+  flex-direction: column; /* Вертикальное размещение контейнеров */
+  gap: 10px; /* Отступ между контейнерами */
+  margin-left: 50px; /* Отступ слева */
+}
+
+.row {
+  display: flex; /* Flex-контейнер для строки */
+  gap: 10px; /* Отступ между контейнерами в строке */
+}
+
+.container,
+.container2 {
+  display: grid; /* Grid-контейнер для плиток */
+  grid-template-columns: repeat(2, 250px); /* Две колонки шириной 250px */
+  gap: 10px; /* Отступ между плитками */
+}
+
+.container3 {
+  display: flex; /* Flex-контейнер для третьего контейнера */
+  flex-direction: column; /* Вертикальное размещение плиток */
+  gap: 10px; /* Отступ между плитками */
+  width: calc(500px + 10px); /* Ширина третьего контейнера */
+}
+
+.container3 .tile {
+  width: 100%; /* Ширина плитки 100% */
+}
+
+.container4 {
+  grid-column: 1 / span 2; /* Занимает две колонки в сетке */
+  display: grid; /* Grid-контейнер для плиток */
+  grid-template-columns: repeat(2, 1fr); /* Две равные колонки */
+  gap: 10px; /* Отступ между плитками */
+}
+
+.tile {
+  width: 100%; /* Ширина плитки 100% */
+  height: 150px; /* Высота плитки */
+  color: white; /* Цвет текста плитки */
+  display: inline-flex; /* Flex-контейнер для плитки */
+  justify-content: center; /* Выравнивание по центру по горизонтали */
+  align-items: center; /* Выравнивание по центру по вертикали */
+  font-size: 24px; /* Размер шрифта плитки */
+  text-decoration: none; /* Убираем подчеркивание у ссылки */
+  border-radius: 5px; /* Закругленные углы плитки */
+  transition: transform 0.1s ease; /* Плавный переход при наведении */
+  background-size: 100% 100%; /* Фоновое изображение растягивается на весь размер плитки */
+}
+
+.tile:hover {
+  transform: scale(1.05); /* Увеличение плитки при наведении */
+}
+
+/* Цвета плиток с градиентами */
+.tile-green {
+  background-image: linear-gradient(to bottom right, #00a300, #006400);
+}
+.tile-green-light {
+  background-image: linear-gradient(to bottom right, #00a300, #3cb371);
+}
+.tile-orange {
+  background-image: linear-gradient(to bottom right, #f09300, #ffa07a);
+}
+.tile-orange-light {
+  background-image: linear-gradient(to bottom right, #f09300, #ffd700);
+}
+.tile-purple {
+  background-image: linear-gradient(to bottom right, #663399, #800080);
+}
+.tile-purple-light {
+  background-image: linear-gradient(to bottom right, #663399, #9370db);
+}
+.tile-pink {
+  background-image: linear-gradient(to bottom right, #d80073, #ff69b4);
+}
+.tile-blue {
+  background-image: linear-gradient(to bottom right, #1e90ff, #00bfff);
+}
+.tile-blue-light {
+  background-image: linear-gradient(to bottom right, #0f4983, #add8e6);
+}
+.tile-red {
+  background-image: linear-gradient(to bottom right, #e51400, #b22222);
+}
+.tile-red-light {
+  background-image: linear-gradient(to bottom right, #e51400, #fa8072);
+}
+
+/* Растягиваем плитки Sports и News на две колонки */
+.container2 .tile:nth-child(5),
+.container2 .tile:nth-child(6) {
+  grid-column: span 2; /* Плитки занимают две колонки */
+}
